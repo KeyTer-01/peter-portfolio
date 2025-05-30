@@ -11,9 +11,9 @@ import {
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Download, ArrowDown } from "lucide-react";
 
-const MotionBox = motion(Box);
-const MotionText = motion(Text);
-const MotionHeading = motion(Heading);
+const MotionBox = motion.create(Box);
+const MotionText = motion.create(Text);
+const MotionHeading = motion.create(Heading);
 
 const HeroSection = () => {
   return (
@@ -73,7 +73,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <HStack spacing={1} flexWrap="wrap">
+          <HStack spacing={0} flexWrap="wrap">
             <Button
               size="lg"
               colorScheme="purple"

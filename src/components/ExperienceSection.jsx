@@ -12,8 +12,8 @@ import {
 import { motion } from "framer-motion";
 import { Calendar, MapPin } from "lucide-react";
 
-const MotionBox = motion(Box);
-const MotionCard = motion(Card);
+const MotionBox = motion.create(Box);
+const MotionCard = motion.create(Card);
 
 const ExperienceSection = () => {
   const experiences = [

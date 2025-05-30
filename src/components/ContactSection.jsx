@@ -15,8 +15,8 @@ import {
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 
-const MotionBox = motion(Box);
-const MotionCard = motion(Card);
+const MotionBox = motion.create(Box);
+const MotionCard = motion.create(Card);
 
 const ContactSection = () => {
   const contactInfo = [
