@@ -19,7 +19,7 @@ import {
 import { motion } from "framer-motion";
 import { Menu, X, Home, User, Briefcase, Folder, Mail } from "lucide-react";
 
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box);
 
 const Navigation = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -60,8 +60,8 @@ const Navigation = () => {
             alignItems="center"
             justifyContent={"center"}
             py={6}
-            initial={{ x: -100 }}
-            animate={{ x: 0 }}
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
           >
             <VStack spacing={6}>
@@ -80,6 +80,22 @@ const Navigation = () => {
               ))}
             </VStack>
           </MotionBox>
+          {/* <MotionBox
+            position="fixed"
+            top="0"
+            left="0"
+            h="100vh"
+            w="64px"
+            bg="gray.900"
+            borderRight="1px"
+            borderColor="whiteAlpha.200"
+            zIndex="1000"
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent={"center"}
+            py={6}
+          ></MotionBox> */}
         </>
       ) : (
         <>
