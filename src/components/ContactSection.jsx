@@ -2,7 +2,6 @@ import {
   Box,
   Text,
   VStack,
-  HStack,
   Heading,
   Button,
   Icon,
@@ -10,7 +9,6 @@ import {
   SimpleGrid,
   Card,
   CardBody,
-  Flex,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
@@ -52,7 +50,7 @@ const ContactSection = () => {
       <VStack spacing={16} align="center" textAlign="center">
         <VStack spacing={6}>
           <Text color="purple.400" fontSize="lg" fontWeight="500">
-            04. What's Next?
+            What&apos;s Next?
           </Text>
           <Heading size="2xl" color="white" fontWeight="bold">
             Get In Touch
@@ -63,9 +61,9 @@ const ContactSection = () => {
             maxW="600px"
             lineHeight="1.6"
           >
-            I'm currently looking for new opportunities and my inbox is always
-            open. Whether you have a question or just want to say hi, I'll try
-            my best to get back to you!
+            I&apos;m currently looking for new opportunities and my inbox is
+            always open. Whether you have a question or just want to say hi,
+            I&apos;ll try my best to get back to you!
           </Text>
         </VStack>
 

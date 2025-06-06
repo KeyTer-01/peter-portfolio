@@ -97,10 +97,7 @@ const ProjectsSection = () => {
     >
       <VStack spacing={16} align="flex-start">
         <Heading size="xl" color="white" fontWeight="bold">
-          <Text as="span" color="purple.400" fontSize="xl" fontWeight="normal">
-            03.{" "}
-          </Text>
-          Some Things I've Built
+          Some Things I&apos;ve Built
         </Heading>
 
         {/* Featured Projects */}

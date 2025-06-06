@@ -9,7 +9,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Download, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const MotionBox = motion.create(Box);
 const MotionText = motion.create(Text);
@@ -20,21 +20,21 @@ const HeroSection = () => {
     <Box id="home" minH="100vh" display="flex" alignItems="center" pt="16">
       <VStack spacing={8} align="flex-start" w="full">
         <MotionText
-          fontSize="lg"
+          fontSize={{ base: "lg", md: "xl", lg: "xl" }}
           color="purple.400"
           fontWeight="500"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Hi, my name is
+          Hi There, I&apos;m
         </MotionText>
 
         <MotionHeading
           fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}
           fontWeight="bold"
           color="white"
-          lineHeight="0.9"
+          lineHeight="0.6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -45,7 +45,7 @@ const HeroSection = () => {
         <MotionHeading
           fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }}
           fontWeight="bold"
-          color="whiteAlpha.700"
+          color="whiteAlpha.500"
           lineHeight="0.9"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ const HeroSection = () => {
           I build things for the web.
         </MotionHeading>
 
-        <MotionText
+        {/* <MotionText
           fontSize={{ base: "lg", md: "xl" }}
           color="whiteAlpha.700"
           maxW="600px"
@@ -63,19 +63,19 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          I'm a software engineer specializing in building exceptional digital
-          experiences. Currently, I'm focused on building accessible,
-          human-centered products using modern web technologies.
-        </MotionText>
+          I&apos;m a software engineer specializing in building exceptional
+          digital experiences. Currently, I&apos;m focused on building
+          accessible, human-centered products using modern web technologies.
+        </MotionText> */}
 
         <MotionBox
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <HStack spacing={0} flexWrap="wrap">
-            <Button
-              size="lg"
+          <HStack spacing={1} flexWrap="wrap">
+            {/* <Button
+              size="md"
               colorScheme="purple"
               variant="outline"
               leftIcon={<Download size={20} />}
@@ -85,14 +85,15 @@ const HeroSection = () => {
                 color: "white",
               }}
             >
-              Download CV
-            </Button>
+              My CV
+            </Button> */}
 
-            <Link href="https://github.com" isExternal>
+            <Link href="https://github.com/KeyTer-01" isExternal>
               <Button
-                size="lg"
+                size="md"
                 variant="ghost"
                 color="whiteAlpha.800"
+                // borderRadius={"full"}
                 _hover={{ color: "purple.400", bg: "whiteAlpha.100" }}
               >
                 <Icon as={Github} boxSize={5} />
@@ -101,7 +102,7 @@ const HeroSection = () => {
 
             <Link href="https://linkedin.com" isExternal>
               <Button
-                size="lg"
+                size="md"
                 variant="ghost"
                 color="whiteAlpha.800"
                 _hover={{ color: "purple.400", bg: "whiteAlpha.100" }}
@@ -112,7 +113,7 @@ const HeroSection = () => {
 
             <Link href="mailto:peterbabalola44@gmail.com">
               <Button
-                size="lg"
+                size="md"
                 variant="ghost"
                 color="whiteAlpha.800"
                 _hover={{ color: "purple.400", bg: "whiteAlpha.100" }}
@@ -123,8 +124,8 @@ const HeroSection = () => {
           </HStack>
         </MotionBox>
 
-        <MotionBox
-          position="absolute"
+        {/* <MotionBox
+          position="fixed"
           bottom="8"
           left="50%"
           transform="translateX(-50%)"
@@ -138,7 +139,7 @@ const HeroSection = () => {
             color="whiteAlpha.600"
             animation="bounce 2s infinite"
           />
-        </MotionBox>
+        </MotionBox> */}
       </VStack>
     </Box>
   );
