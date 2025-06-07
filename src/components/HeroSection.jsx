@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
+// import bgImage from "../assets/images/tech-bg.jpg";
 
 const MotionBox = motion.create(Box);
 const MotionText = motion.create(Text);
@@ -17,44 +18,67 @@ const MotionHeading = motion.create(Heading);
 
 const HeroSection = () => {
   return (
-    <Box id="home" minH="100vh" display="flex" alignItems="center" pt="16">
-      <VStack spacing={8} align="flex-start" w="full">
-        <MotionText
-          fontSize={{ base: "lg", md: "xl", lg: "xl" }}
-          color="purple.400"
-          fontWeight="500"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Hi There, I&apos;m
-        </MotionText>
+    <>
+      {/* <Box
+        position="absolute"
+        top={0}
+        left={0}
+        w="100%"
+        h="100vh"
+        bgImage={`url(${bgImage})`}
+        bgSize="cover"
+        bgPosition="center"
+        bgRepeat="no-repeat"
+        bgColor="gray.900"
+        zIndex={1}
+        opacity={0.3}
+        filter={"blur(8px)"}
+      /> */}
+      <Box
+        id="home"
+        minH="100vh"
+        display="flex"
+        alignItems="center"
+        pt="16"
+        px={[0, "100px"]}
+      >
+        <VStack spacing={8} align="flex-start" w="full" zIndex={1}>
+          <MotionText
+            fontSize={{ base: "lg", md: "xl", lg: "xl" }}
+            color="purple.400"
+            fontWeight="500"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Hi There, I&apos;m
+          </MotionText>
 
-        <MotionHeading
-          fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}
-          fontWeight="bold"
-          color="white"
-          lineHeight="0.6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          Peter Babalola.
-        </MotionHeading>
+          <MotionHeading
+            fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}
+            fontWeight="bold"
+            color="white"
+            lineHeight="0.6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            Peter Babalola.
+          </MotionHeading>
 
-        <MotionHeading
-          fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }}
-          fontWeight="bold"
-          color="whiteAlpha.500"
-          lineHeight="0.9"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          I build things for the web.
-        </MotionHeading>
+          <MotionHeading
+            fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }}
+            fontWeight="bold"
+            color="whiteAlpha.500"
+            lineHeight="0.9"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            I build things for the web.
+          </MotionHeading>
 
-        {/* <MotionText
+          {/* <MotionText
           fontSize={{ base: "lg", md: "xl" }}
           color="whiteAlpha.700"
           maxW="600px"
@@ -68,13 +92,13 @@ const HeroSection = () => {
           accessible, human-centered products using modern web technologies.
         </MotionText> */}
 
-        <MotionBox
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <HStack spacing={1} flexWrap="wrap">
-            {/* <Button
+          <MotionBox
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <HStack spacing={1} flexWrap="wrap">
+              {/* <Button
               size="md"
               colorScheme="purple"
               variant="outline"
@@ -88,43 +112,43 @@ const HeroSection = () => {
               My CV
             </Button> */}
 
-            <Link href="https://github.com/KeyTer-01" isExternal>
-              <Button
-                size="md"
-                variant="ghost"
-                color="whiteAlpha.800"
-                // borderRadius={"full"}
-                _hover={{ color: "purple.400", bg: "whiteAlpha.100" }}
-              >
-                <Icon as={Github} boxSize={5} />
-              </Button>
-            </Link>
+              <Link href="https://github.com/KeyTer-01" isExternal>
+                <Button
+                  size="md"
+                  variant="ghost"
+                  color="whiteAlpha.800"
+                  // borderRadius={"full"}
+                  _hover={{ color: "purple.400", bg: "whiteAlpha.100" }}
+                >
+                  <Icon as={Github} boxSize={5} />
+                </Button>
+              </Link>
 
-            <Link href="https://linkedin.com" isExternal>
-              <Button
-                size="md"
-                variant="ghost"
-                color="whiteAlpha.800"
-                _hover={{ color: "purple.400", bg: "whiteAlpha.100" }}
-              >
-                <Icon as={Linkedin} boxSize={5} />
-              </Button>
-            </Link>
+              <Link href="https://linkedin.com" isExternal>
+                <Button
+                  size="md"
+                  variant="ghost"
+                  color="whiteAlpha.800"
+                  _hover={{ color: "purple.400", bg: "whiteAlpha.100" }}
+                >
+                  <Icon as={Linkedin} boxSize={5} />
+                </Button>
+              </Link>
 
-            <Link href="mailto:peterbabalola44@gmail.com">
-              <Button
-                size="md"
-                variant="ghost"
-                color="whiteAlpha.800"
-                _hover={{ color: "purple.400", bg: "whiteAlpha.100" }}
-              >
-                <Icon as={Mail} boxSize={5} />
-              </Button>
-            </Link>
-          </HStack>
-        </MotionBox>
+              <Link href="mailto:peterbabalola44@gmail.com">
+                <Button
+                  size="md"
+                  variant="ghost"
+                  color="whiteAlpha.800"
+                  _hover={{ color: "purple.400", bg: "whiteAlpha.100" }}
+                >
+                  <Icon as={Mail} boxSize={5} />
+                </Button>
+              </Link>
+            </HStack>
+          </MotionBox>
 
-        {/* <MotionBox
+          {/* <MotionBox
           position="fixed"
           bottom="8"
           left="50%"
@@ -140,8 +164,9 @@ const HeroSection = () => {
             animation="bounce 2s infinite"
           />
         </MotionBox> */}
-      </VStack>
-    </Box>
+        </VStack>
+      </Box>
+    </>
   );
 };
 

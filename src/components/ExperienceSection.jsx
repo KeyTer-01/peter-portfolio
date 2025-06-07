@@ -8,6 +8,7 @@ import {
   CardBody,
   Badge,
   Divider,
+  Flex,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Calendar, MapPin } from "lucide-react";
@@ -76,84 +77,87 @@ const ExperienceSection = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <VStack spacing={12} align="flex-start">
-          <Heading size="xl" color="white" fontWeight="bold">
-            Where I&apos;ve Worked
-          </Heading>
+        <Flex align="center" justifyContent={"center"} w={"full"}>
+          <Flex flexDirection={"column"} w={{ base: "100%", md: "80%" }}>
+            <Heading size="xl" color="white" fontWeight="bold" mb={4}>
+              Where I&apos;ve Worked
+            </Heading>
 
-          <VStack spacing={8} w="full">
-            {experiences.map((exp, index) => (
-              <MotionCard
-                key={index}
-                w="full"
-                bg="whiteAlpha.50"
-                border="1px"
-                borderColor="whiteAlpha.200"
-                _hover={{ borderColor: "purple.400", bg: "whiteAlpha.100" }}
-                transition="all 0.3s ease"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                //   transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <CardBody p={8}>
-                  <VStack spacing={4} align="flex-start">
-                    <HStack justify="space-between" w="full" flexWrap="wrap">
-                      <VStack spacing={2} align="flex-start">
-                        <Heading size="lg" color="white">
-                          {exp.title}
-                        </Heading>
-                        <Heading size="md" color="purple.400">
-                          {exp.company}
-                        </Heading>
-                      </VStack>
-                      <VStack spacing={1} align="flex-end">
-                        <HStack color="whiteAlpha.700">
-                          <Calendar size={16} />
-                          <Text fontSize="sm">{exp.period}</Text>
-                        </HStack>
-                        <HStack color="whiteAlpha.700">
-                          <MapPin size={16} />
-                          <Text fontSize="sm">{exp.location}</Text>
-                        </HStack>
-                      </VStack>
-                    </HStack>
+            <VStack spacing={8} w="full">
+              {experiences.map((exp, index) => (
+                <MotionCard
+                  key={index}
+                  w="full"
+                  bg="whiteAlpha.50"
+                  border="1px"
+                  // width={"80%"}
+                  borderColor="whiteAlpha.200"
+                  _hover={{ borderColor: "purple.400", bg: "whiteAlpha.100" }}
+                  transition="all 0.3s ease"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  //   transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <CardBody p={8}>
+                    <VStack spacing={4} align="flex-start">
+                      <HStack justify="space-between" w="full" flexWrap="wrap">
+                        <VStack spacing={2} align="flex-start">
+                          <Heading size="lg" color="white">
+                            {exp.title}
+                          </Heading>
+                          <Heading size="md" color="purple.400">
+                            {exp.company}
+                          </Heading>
+                        </VStack>
+                        <VStack spacing={1} align="flex-end">
+                          <HStack color="whiteAlpha.700">
+                            <Calendar size={16} />
+                            <Text fontSize="sm">{exp.period}</Text>
+                          </HStack>
+                          <HStack color="whiteAlpha.700">
+                            <MapPin size={16} />
+                            <Text fontSize="sm">{exp.location}</Text>
+                          </HStack>
+                        </VStack>
+                      </HStack>
 
-                    <VStack spacing={2} align="flex-start" w="full">
-                      {exp.description.map((item, idx) => (
-                        <HStack key={idx} align="flex-start" spacing={3}>
-                          <Text color="purple.400" fontSize="sm" mt="2px">
-                            ▸
-                          </Text>
-                          <Text color="whiteAlpha.800" lineHeight="1.6">
-                            {item}
-                          </Text>
-                        </HStack>
-                      ))}
+                      <VStack spacing={2} align="flex-start" w="full">
+                        {exp.description.map((item, idx) => (
+                          <HStack key={idx} align="flex-start" spacing={3}>
+                            <Text color="purple.400" fontSize="sm" mt="2px">
+                              ▸
+                            </Text>
+                            <Text color="whiteAlpha.800" lineHeight="1.6">
+                              {item}
+                            </Text>
+                          </HStack>
+                        ))}
+                      </VStack>
+
+                      <Divider borderColor="whiteAlpha.200" />
+
+                      <HStack spacing={2} flexWrap="wrap">
+                        {exp.technologies.map((tech) => (
+                          <Badge
+                            key={tech}
+                            colorScheme="purple"
+                            variant="outline"
+                            px={3}
+                            py={1}
+                            borderRadius="full"
+                          >
+                            {tech}
+                          </Badge>
+                        ))}
+                      </HStack>
                     </VStack>
-
-                    <Divider borderColor="whiteAlpha.200" />
-
-                    <HStack spacing={2} flexWrap="wrap">
-                      {exp.technologies.map((tech) => (
-                        <Badge
-                          key={tech}
-                          colorScheme="purple"
-                          variant="outline"
-                          px={3}
-                          py={1}
-                          borderRadius="full"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </HStack>
-                  </VStack>
-                </CardBody>
-              </MotionCard>
-            ))}
-          </VStack>
-        </VStack>
+                  </CardBody>
+                </MotionCard>
+              ))}
+            </VStack>
+          </Flex>
+        </Flex>
       </MotionBox>
     </>
   );

@@ -14,62 +14,73 @@ import AboutSection from "../components/AboutSection";
 import ExperienceSection from "../components/ExperienceSection";
 import ProjectsSection from "../components/ProjectsSection";
 import ContactSection from "../components/ContactSection";
-
+import bgImage from "../assets/images/tech-bg.jpg";
 // const MotionBox = motion(Box);
 
 const Index = () => {
   return (
-    <Flex
-      minH="100vh"
-      position="relative"
-      width={"100%"}
-      color="white"
-      flexDirection={"column"}
-      alignItems={"center"}
-      justifyContent={"flex-end"}
-      px={[0, "100px"]}
-    >
-      {/* Background Pattern */}
-      <Box
-        position="fixed"
-        top="0"
-        left="0"
-        right="0"
-        bottom="0"
-        opacity="0.05"
-        backgroundImage="radial-gradient(circle at 25% 25%, #8b5cf6 0%, transparent 50%), radial-gradient(circle at 75% 75%, #06b6d4 0%, transparent 50%)"
-        pointerEvents="none"
-        zIndex="-1"
-      />
-
-      <Navigation />
-
-      <Box
-        // maxW="6xl"
-        px={8}
-        display={"flex"}
-        justifyContent={"center"}
-        // bgColor={"orange"}
+    <>
+      <Flex
+        minH="100vh"
+        position="relative"
         width={"100%"}
+        color="white"
+        flexDirection={"column"}
+        alignItems={"center"}
+        justifyContent={"flex-end"}
       >
-        <VStack spacing={20} align="stretch">
-          <HeroSection />
-          <AboutSection />
-          <ExperienceSection />
-          <ProjectsSection />
-          <ContactSection />
-        </VStack>
-      </Box>
+        {/* Background Pattern */}
+        <Box
+          position="fixed"
+          top="0"
+          left="0"
+          right="0"
+          bottom="0"
+          opacity="0.05"
+          backgroundImage="radial-gradient(circle at 25% 25%, #8b5cf6 0%, transparent 50%), radial-gradient(circle at 75% 75%, #06b6d4 0%, transparent 50%)"
+          pointerEvents="none"
+          zIndex="-1"
+        />
 
-      {/* Footer */}
-      <Box py={8} mt={20} borderTop="1px" borderColor="whiteAlpha.200">
-        <Container maxW="6xl">
-          <Text textAlign="center" color="whiteAlpha.600" fontSize="sm">
-            © 2025 Peter Babalola. Built with React & Chakra UI.
-          </Text>
-        </Container>
-      </Box>
-    </Flex>
+        <Navigation />
+
+        <Box px={8} display={"flex"} justifyContent={"center"} width={"100%"}>
+          <VStack spacing={20} align="stretch">
+            <Box
+              position="fixed"
+              top={0}
+              left={0}
+              w="100%"
+              h="100vh"
+              bgImage={`url(${bgImage})`}
+              bgSize="cover"
+              bgPosition="center"
+              bgRepeat="no-repeat"
+              bgColor="gray.900"
+              zIndex={0}
+              opacity={0.05}
+              filter={"blur(8px)"}
+            />
+            <HeroSection />
+            <Flex flexDirection={"column"} px={[0, "100px"]}>
+              <AboutSection />
+              <ExperienceSection />
+              <ProjectsSection />
+              <ContactSection />
+            </Flex>
+          </VStack>
+        </Box>
+
+        {/* Footer */}
+        <Box py={8} mt={20} borderTop="1px" borderColor="whiteAlpha.200">
+          <Container maxW="6xl">
+            <Text textAlign="center" color="whiteAlpha.600" fontSize="sm">
+              © 2025 Peter Babalola. Built with React & Chakra UI.
+            </Text>
+          </Container>
+        </Box>
+      </Flex>
+    </>
   );
 };
 

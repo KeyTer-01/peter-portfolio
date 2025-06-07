@@ -7,9 +7,11 @@ import {
   CardBody,
   Image,
   Flex,
+  Button,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import myImage from "../assets/images/rImage.jpg";
+import { Download } from "lucide-react";
 
 const MotionBox = motion.create(Box);
 
@@ -51,7 +53,7 @@ const AboutSection = () => {
             </Card>
           </Box>
           <VStack
-            spacing={6}
+            spacing={4}
             align="flex-start"
             w={{ base: "full", md: "50%" }}
           >
@@ -66,6 +68,19 @@ const AboutSection = () => {
               communication skills, I bring creativity and critical thinking to
               every project
             </Text>
+            <Button
+              size="md"
+              colorScheme="purple"
+              variant="outline"
+              leftIcon={<Download size={16} />}
+              _hover={{
+                bg: "purple.500",
+                borderColor: "purple.500",
+                color: "white",
+              }}
+            >
+              View My CV
+            </Button>
           </VStack>
         </Flex>
       </VStack>

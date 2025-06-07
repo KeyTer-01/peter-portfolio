@@ -108,7 +108,7 @@ const Navigation = () => {
             left="0"
             right="0"
             // bg="rgba(0, 0, 0, 0.8)"
-            backdropFilter="blur(10px)"
+            // backdropFilter="blur(10px)"
             // borderBottom="1px"
             // borderColor="whiteAlpha.200"
             zIndex="1000"

@@ -49,9 +49,6 @@ const ContactSection = () => {
     >
       <VStack spacing={16} align="center" textAlign="center">
         <VStack spacing={6}>
-          <Text color="purple.400" fontSize="lg" fontWeight="500">
-            What&apos;s Next?
-          </Text>
           <Heading size="2xl" color="white" fontWeight="bold">
             Get In Touch
           </Heading>
