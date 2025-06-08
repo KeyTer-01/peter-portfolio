@@ -10,6 +10,9 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Typewriter } from "react-simple-typewriter";
+
 // import bgImage from "../assets/images/tech-bg.jpg";
 
 const MotionBox = motion.create(Box);
@@ -17,30 +20,21 @@ const MotionText = motion.create(Text);
 const MotionHeading = motion.create(Heading);
 
 const HeroSection = () => {
+  const titles = [
+    "Frontend Developer",
+    "Web Craftsman",
+    "Mobile App Developer",
+    "AI Enthusiast",
+  ];
   return (
     <>
-      {/* <Box
-        position="absolute"
-        top={0}
-        left={0}
-        w="100%"
-        h="100vh"
-        bgImage={`url(${bgImage})`}
-        bgSize="cover"
-        bgPosition="center"
-        bgRepeat="no-repeat"
-        bgColor="gray.900"
-        zIndex={1}
-        opacity={0.3}
-        filter={"blur(8px)"}
-      /> */}
       <Box
         id="home"
-        minH="100vh"
+        minH={{ base: "80vh", md: "100vh" }}
         display="flex"
         alignItems="center"
         pt="16"
-        px={[0, "100px"]}
+        px={[8, 40]}
       >
         <VStack spacing={8} align="flex-start" w="full" zIndex={1}>
           <MotionText
@@ -58,7 +52,8 @@ const HeroSection = () => {
             fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}
             fontWeight="bold"
             color="white"
-            lineHeight="0.6"
+            lineHeight="0.1"
+            textShadow="0 0 20px rgba(128, 90, 213, 0.6)"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -69,13 +64,22 @@ const HeroSection = () => {
           <MotionHeading
             fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }}
             fontWeight="bold"
-            color="whiteAlpha.500"
+            color="whiteAlpha.400"
             lineHeight="0.9"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            I build things for the web.
+            <Typewriter
+              words={titles}
+              loop={0}
+              cursor
+              cursorStyle="_"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
+            {/* {currentTitle} */}
           </MotionHeading>
 
           {/* <MotionText
@@ -98,26 +102,11 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <HStack spacing={1} flexWrap="wrap">
-              {/* <Button
-              size="md"
-              colorScheme="purple"
-              variant="outline"
-              leftIcon={<Download size={20} />}
-              _hover={{
-                bg: "purple.500",
-                borderColor: "purple.500",
-                color: "white",
-              }}
-            >
-              My CV
-            </Button> */}
-
               <Link href="https://github.com/KeyTer-01" isExternal>
                 <Button
                   size="md"
                   variant="ghost"
                   color="whiteAlpha.800"
-                  // borderRadius={"full"}
                   _hover={{ color: "purple.400", bg: "whiteAlpha.100" }}
                 >
                   <Icon as={Github} boxSize={5} />
@@ -147,23 +136,6 @@ const HeroSection = () => {
               </Link>
             </HStack>
           </MotionBox>
-
-          {/* <MotionBox
-          position="fixed"
-          bottom="8"
-          left="50%"
-          transform="translateX(-50%)"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1 }}
-        >
-          <Icon
-            as={ArrowDown}
-            boxSize={6}
-            color="whiteAlpha.600"
-            animation="bounce 2s infinite"
-          />
-        </MotionBox> */}
         </VStack>
       </Box>
     </>

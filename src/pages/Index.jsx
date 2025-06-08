@@ -44,7 +44,7 @@ const Index = () => {
 
         <Navigation />
 
-        <Box px={8} display={"flex"} justifyContent={"center"} width={"100%"}>
+        <Box display={"flex"} justifyContent={"center"} width={"100%"}>
           <VStack spacing={20} align="stretch">
             <Box
               position="fixed"
@@ -62,10 +62,10 @@ const Index = () => {
               filter={"blur(8px)"}
             />
             <HeroSection />
-            <Flex flexDirection={"column"} px={[0, "100px"]}>
-              <AboutSection />
+            <AboutSection />
+            <Flex flexDirection={"column"} px={[8, "100px"]}>
               <ExperienceSection />
-              <ProjectsSection />
+              {/* <ProjectsSection /> */}
               <ContactSection />
             </Flex>
           </VStack>
