@@ -1,21 +1,11 @@
 import { Box, Container, Flex, Text, VStack } from "@chakra-ui/react";
-// import { motion } from "framer-motion";
-// import {
-//   Github,
-//   Linkedin,
-//   Mail,
-//   ExternalLink,
-//   Calendar,
-//   MapPin,
-// } from "lucide-react";
 import Navigation from "../components/Navigation";
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
 import ExperienceSection from "../components/ExperienceSection";
-import ProjectsSection from "../components/ProjectsSection";
+// import ProjectsSection from "../components/ProjectsSection";
 import ContactSection from "../components/ContactSection";
 import bgImage from "../assets/images/tech-bg.jpg";
-// const MotionBox = motion(Box);
 
 const Index = () => {
   return (
@@ -29,7 +19,6 @@ const Index = () => {
         alignItems={"center"}
         justifyContent={"flex-end"}
       >
-        {/* Background Pattern */}
         <Box
           position="fixed"
           top="0"

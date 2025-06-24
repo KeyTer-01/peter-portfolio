@@ -22,7 +22,7 @@ import {
   Home,
   User,
   Briefcase,
-  Folder,
+  // Folder,
   Mail,
   ArrowDown,
 } from "lucide-react";
@@ -39,7 +39,7 @@ const Navigation = () => {
     { label: "Home", href: "#home", icon: <Home size={20} /> },
     { label: "About", href: "#about", icon: <User size={20} /> },
     { label: "Experience", href: "#experience", icon: <Briefcase size={20} /> },
-    { label: "Projects", href: "#projects", icon: <Folder size={20} /> },
+    // { label: "Projects", href: "#projects", icon: <Folder size={20} /> },
     { label: "Contact", href: "#contact", icon: <Mail size={20} /> },
   ];
 

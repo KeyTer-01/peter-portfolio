@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 
 // import bgImage from "../assets/images/tech-bg.jpg";
@@ -79,22 +78,7 @@ const HeroSection = () => {
               deleteSpeed={50}
               delaySpeed={1500}
             />
-            {/* {currentTitle} */}
           </MotionHeading>
-
-          {/* <MotionText
-          fontSize={{ base: "lg", md: "xl" }}
-          color="whiteAlpha.700"
-          maxW="600px"
-          lineHeight="1.6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          I&apos;m a software engineer specializing in building exceptional
-          digital experiences. Currently, I&apos;m focused on building
-          accessible, human-centered products using modern web technologies.
-        </MotionText> */}
 
           <MotionBox
             initial={{ opacity: 0, y: 20 }}

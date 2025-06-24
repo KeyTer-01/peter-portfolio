@@ -24,10 +24,10 @@ const ExperienceSection = () => {
       location: "Lekki, Lagos",
       period: "2023 - Present",
       description: [
-        "Lead development of scalable web applications serving 100k+ users",
-        "Mentor junior developers and conduct code reviews",
+        "Contributed to the development of several government websites and web applications using HTML, CSS3, and React.js.",
+        "Participated in JAD sessions, code reviews, and monthly technology meetings, providing actionable feedback that improved design and coding practices",
         "Collaborate with cross-functional teams to deliver high-quality products",
-        "Implement CI/CD pipelines and improve development workflow",
+        "Utilized Swagger UI and Postman for testing and consuming API endpoints",
       ],
       technologies: [
         "React",
@@ -40,30 +40,28 @@ const ExperienceSection = () => {
       ],
     },
     {
-      title: "Frontend Developer - Intern",
-      company: "Intelligence Technologies",
-      location: "Lagos, Nigeria",
-      period: "Mar. 2021 - Oct. 2021",
-      description: [
-        "Developed responsive web applications for various clients",
-        "Built RESTful APIs and integrated third-party services",
-        "Optimized application performance and user experience",
-        "Worked closely with designers to implement pixel-perfect interfaces",
-      ],
-      technologies: ["React", "Redux", "Material UI"],
-    },
-    {
       title: "Frontend Developer",
       company: "Krevus",
       location: "Remote",
       period: "Aug. 2023 - Feb. 2024",
       description: [
-        "Created interactive user interfaces using modern JavaScript frameworks",
+        "Worked on a fintech web application, using HTML, CSS3, and React.js to streamline access to quick loans",
         "Collaborated with UX/UI designers to implement design systems",
-        "Contributed to open-source projects and technical documentation",
-        "Participated in agile development processes and sprint planning",
+        "Engaged in weekly code reviews, delivering feedback that significantly enhanced overall code quality and standards",
+        "Employed MUI (Material-UI) to develop a visually appealing, responsive, and accessible web application",
       ],
       technologies: ["JavaScript", "React", "Git", "Figma"],
+    },
+    {
+      title: "Frontend Developer - Intern",
+      company: "Intelligence Technologies",
+      location: "Lagos, Nigeria",
+      period: "Mar. 2021 - Oct. 2021",
+      description: [
+        "Contributed to the development of a user-friendly online Health Insurance Marketplace, providing access to affordable health insurance for over 10,000 individuals across Nigeria",
+        "Gained experience with WordPress and accessible plugins to create an ecommerce web application for product sales and bidding.",
+      ],
+      technologies: ["React", "Redux", "Material UI"],
     },
   ];
 
